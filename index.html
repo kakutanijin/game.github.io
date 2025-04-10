@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>じゃんけんホイ・チャンピオン！</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    button { padding: 10px 20px; margin: 10px; }
+  </style>
+</head>
+<body>
+  <h1>じゃんけんホイ！</h1>
+  <form id="nameForm">
+    <input type="text" id="playerName" placeholder="名前を入れてね（空でもOK）">
+    <button type="submit">スタート</button>
+  </form>
+<!-- 名前フォームの下に追加しよう -->
+<div id="gameArea" style="display:none;">
+  <h2 id="status">じゃんけんしよう！</h2>
+  <button onclick="playJanken('グー')">グー</button>
+  <button onclick="playJanken('チョキ')">チョキ</button>
+  <button onclick="playJanken('パー')">パー</button>
+  <p id="resultText"></p>
+</div>
+<!-- ゲームエリアにあっち向いてホイのボタンを追加 -->
+<div id="directionArea" style="display:none;">
+  <h2>勝ちました！次はあっち向いてホイ！</h2>
+  <button onclick="selectDirection('上')">上</button>
+  <button onclick="selectDirection('下')">下</button>
+  <button onclick="selectDirection('左')">左</button>
+  <button onclick="selectDirection('右')">右</button>
+  <p id="directionResult"></p>
+</div>
+
+  <script src="game.js"></script>
+</body>
+</html>
